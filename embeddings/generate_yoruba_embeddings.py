@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 from langchain_community.vectorstores import FAISS
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
-# ---------------- LOGGING ----------------
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -17,7 +16,6 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 
-# ---------------- EXTRACT ----------------
 def extract_yoruba_hymns():
     pdf_path = "docs/Yoruba/yoruba_hymns.pdf"
     logger.info(f"Reading {pdf_path}")

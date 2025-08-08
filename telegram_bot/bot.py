@@ -55,11 +55,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def clear(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Clear the user's conversation data."""
     logger.info("Received /clear command")
-    context.user_data.clear()  # Clear user-specific data
+    context.user_data.clear()
     await update.message.reply_text(
         "Conversation cleared! Click /start or wait for the welcome message to begin again.\n"
-        "Note: To manage or forget this chat from my memory, go to the 'Data Controls' section in your settings "
-        "or click the book icon beneath this message to select this chat for removal."
+        "Note: To manage or forget this chat from my memory, go to the 'Data Controls' section in your settings"
     )
     logger.info("Cleared user data and sent confirmation")
     # Resend welcome message after clearing
