@@ -17,6 +17,7 @@ ChoralMind is a Telegram bot that helps you search and retrieve **English** and 
 - Google Generative AI API for embeddings
 - FAISS for similarity search
 - pdfplumber for PDF hymn extraction
+- Gradio for interactive web interface
 
 ## 📂 Project Structure
 ```
@@ -40,7 +41,7 @@ ChoralMind is a Telegram bot that helps you search and retrieve **English** and 
 **Clone the repository**
 ```bash
 git clone https://github.com/yourusername/choralmind.git
-cd choralmind
+cd ChoralMind
 ```
 
 ## 📦 Create and Activate a Virtual Environment
