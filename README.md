@@ -20,18 +20,17 @@ ChoralMind is a Telegram bot that helps you search and retrieve **English** and 
 
 ## 📂 Project Structure
 
-project/
-├── docs/                # hymns PDF source  
-├── data/                # Extracted hymns in JSON  
-├── embeddings/          # embedding scripts and FAISS Index  
-├── retriever/  
-│   └── retriever.py     # HymnRetriever class  
-├── llm/  
-│   └── generate_response.py   # Formats retrieved results into Telegram reply  
-├── telegran_bot         # Telegram bot entrypoint  
-│   └── bot.py  
-├── main.py              # main program  
-├── requirements.txt     # Python dependencies  
+docs/  # hymns PDF source  
+data/  # Extracted hymns in JSON  
+embeddings/  # embedding scripts and FAISS Index  
+retriever/  
+         └── retriever.py     # HymnRetriever class  
+llm/  
+   └── generate_response.py   # Formats retrieved results into Telegram reply  
+telegran_bot/  # Telegram bot entrypoint
+            └── bot.py  
+main.py              # main program  
+requirements.txt     # Python dependencies  
 
 ## ⚙️ Installation
 **Clone the repository**
