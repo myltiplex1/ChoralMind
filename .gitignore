@@ -28,6 +28,7 @@ MANIFEST
 .env
 choral_mind.log
 hym/
+ms/
 
 
 # PyInstaller
