@@ -11,7 +11,7 @@ ChoralMind is a Telegram bot that helps you search and retrieve **English** and 
 - Maintains `hymn_id` mapping so results link back to the full hymn text.
 
 ## 🛠 Tech Stack
-- **Python 3.10+**
+- **Python 3.12**
 - python-telegram-bot
 - LangChain for text chunking and FAISS vector storage
 - Google Generative AI API for embeddings
@@ -30,7 +30,9 @@ ChoralMind is a Telegram bot that helps you search and retrieve **English** and 
 ├── telegran_bot         # Telegram bot entrypoint  
 │   └── bot.py  
 ├── main.py              # main program  
-├── requirements.txt     # Python dependencies  s
+├── requirements.txt     # Python dependencies
+|── gradio_app.py        # interactive web interface
+
 
 ```
 
@@ -90,6 +92,14 @@ python python embeddings/generate_english_embeddings.py
 ```bash
 python main.py
 ```
+## 🚀 Running the Gradio App
+
+This project uses [Gradio](https://gradio.app) to provide an interactive web interface.
+
+```bash
+python gradio_app.py
+```
+---
 
 ---
 
