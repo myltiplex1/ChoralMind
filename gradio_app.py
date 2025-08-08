@@ -22,7 +22,7 @@ def search_hymn_gradio(language, query):
 
     # Debounce: only run if enough time has passed
     if now - last_search_time < DEBOUNCE_DELAY:
-        return gr.update()  # No change
+        return gr.update()
 
     last_search_time = now
 
