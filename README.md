@@ -19,7 +19,7 @@ ChoralMind is a Telegram bot that helps you search and retrieve **English** and 
 - pdfplumber for PDF hymn extraction
 
 ## 📂 Project Structure
-
+```
 docs/  # hymns PDF source  
 data/  # Extracted hymns in JSON  
 embeddings/  # embedding scripts and FAISS Index  
