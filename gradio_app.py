@@ -1,5 +1,4 @@
 import time
-import os
 import gradio as gr
 from retriever.retriever import HymnRetriever
 from llm.generate_response import generate_hymn_response
@@ -12,21 +11,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Track last search time for debounce
-last_search_time = 0
-DEBOUNCE_DELAY = 2  # seconds
-
-# Hymn search function with manual debounce
+# Hymn search function
 def search_hymn_gradio(language, query):
-    global last_search_time
-    now = time.time()
-
-    # Debounce: only run if enough time has passed
-    if now - last_search_time < DEBOUNCE_DELAY:
-        return gr.update()
-
-    last_search_time = now
-
     logger.info(f"Language selected: {language}")
     logger.info(f"Hymn search query: {query}")
     
@@ -59,7 +45,7 @@ def clear_results():
 # UI
 with gr.Blocks() as demo:
     gr.Markdown("# 🎶 ChoralMind — Hymn Search")
-    gr.Markdown("Find hymns in **English** or **Yoruba** instantly as you type.")
+    gr.Markdown("Find hymns in **English** or **Yoruba**.")
 
     with gr.Row():
         with gr.Column(scale=1):
@@ -74,6 +60,8 @@ with gr.Blocks() as demo:
                 label="Hymn Line",
                 lines=2
             )
+
+            search_btn = gr.Button("🔍 Search")
 
         with gr.Column(scale=2):
             output = gr.Textbox(
@@ -90,8 +78,8 @@ with gr.Blocks() as demo:
         outputs=[query, output]
     )
 
-    # Instant search with manual debounce
-    query.input(
+    # Search triggered only by Search button click
+    search_btn.click(
         fn=search_hymn_gradio,
         inputs=[language, query],
         outputs=output
