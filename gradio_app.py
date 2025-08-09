@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 # Track last search time for debounce
 last_search_time = 0
-DEBOUNCE_DELAY = 1.5  # seconds
+DEBOUNCE_DELAY = 2  # seconds
 
 # Hymn search function with manual debounce
 def search_hymn_gradio(language, query):
