@@ -2,11 +2,9 @@
 
 ChoralMind is a Telegram bot that helps you search and retrieve **English** and **Yoruba** hymns using semantic search with FAISS embeddings.
 
-Try here: 
-https://choralmind.onrender.com?__theme=dark
-                    or
-https://huggingface.co/spaces/timflash/ChoralMind
-          
+Try here: [ChoralMind](https://choralmind.onrender.com?__theme=dark)
+                              or
+Try here: [ChoralMind](https://huggingface.co/spaces/timflash/ChoralMind)
 
 ## 📌 Features
 - Search hymns in **English** and **Yoruba** by typing any line from the hymn.
